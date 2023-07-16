@@ -1,3 +1,29 @@
+const User = function User({
+  user,
+  selected,
+  onSelectUser,
+}: {
+  user: { id: number; name: string };
+  selected: true | false;
+  onSelectUser: (id: number) => void;
+}) {
+  let className = "user";
+  if (selected) {
+    className = className + " selected";
+  }
+  console.log(user.name);
+  return (
+    <li
+      className={className}
+      onClick={() => {
+        onSelectUser(user.id);
+      }}
+    >
+      {user.name}
+    </li>
+  );
+};
+
 function Users({
   users,
   onSelectUser,
@@ -11,16 +37,12 @@ function Users({
   return (
     <ul className="users">
       {users.map((user) => (
-        <li
+        <User
           key={user.id}
-          className={user.id === selectedId ? "user selected" : "user"}
-          onClick={() => {
-            console.log("click");
-            onSelectUser(user.id);
-          }}
-        >
-          {user.name}
-        </li>
+          user={user}
+          selected={user.id === selectedId}
+          onSelectUser={onSelectUser}
+        />
       ))}
     </ul>
   );

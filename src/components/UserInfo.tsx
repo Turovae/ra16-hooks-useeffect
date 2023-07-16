@@ -15,7 +15,6 @@ function UserInfo({ user }: { user: UserProps }) {
   console.log(user);
   return (
     <div className="user-info">
-      {"#" + user.id}
       <div className="user-avatar">
         <img src={user.avatar} alt={user.name} />
       </div>

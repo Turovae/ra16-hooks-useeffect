@@ -39,7 +39,7 @@ function App() {
       }
     };
     console.log("fetching");
-    fetchData();
+    void fetchData();
   }, [userId]);
 
   const handleSelectUser = (id: number): void => {
