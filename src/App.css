@@ -25,3 +25,27 @@
 .user:hover {
   background-color: lightblue;
 }
+
+.user-info {
+  border: 1px solid lightblue;
+  margin-left: 20px;
+  width: 300px;
+}
+
+.user-avatar img {
+  width: 100%;
+}
+
+.user-details {
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+.user-details:not(:last-child) {
+  border-bottom: 1px solid lightblue;
+}
+
+.user-details.user-name {
+  font-size: 1.2em;
+  padding-bottom: 15px;
+}

@@ -11,7 +11,6 @@ const User = function User({
   if (selected) {
     className = className + " selected";
   }
-  console.log(user.name);
   return (
     <li
       className={className}
@@ -33,7 +32,6 @@ function Users({
   onSelectUser: (id: number) => void;
   selectedId: number | undefined;
 }) {
-  console.log(users);
   return (
     <ul className="users">
       {users.map((user) => (

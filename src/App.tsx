@@ -33,17 +33,14 @@ function App() {
         const data = (await response.json()) as object;
 
         fetchingCallback(data);
-        console.log(data);
       } catch (e) {
         console.log(e);
       }
     };
-    console.log("fetching");
     void fetchData();
   }, [userId]);
 
   const handleSelectUser = (id: number): void => {
-    console.log(id);
     if (id === userId) {
       return;
     }

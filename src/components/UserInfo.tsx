@@ -12,13 +12,12 @@ interface UserProps {
 }
 
 function UserInfo({ user }: { user: UserProps }) {
-  console.log(user);
   return (
     <div className="user-info">
       <div className="user-avatar">
         <img src={user.avatar} alt={user.name} />
       </div>
-      <div className="user-name">{user.name}</div>
+      <div className="user-details user-name">{user.name}</div>
       <div className="user-details">City: {user.details.city}</div>
       <div className="user-details">Company: {user.details.company}</div>
       <div className="user-details">Position: {user.details.position}</div>
